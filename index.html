@@ -13,14 +13,34 @@
             padding: 0;
             margin: 0;
         }
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0f4a8a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00baf2;
+  border-radius: 20%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #498699;
+}
     </style>
 </head>
 <body>
-    <nav class="flex items-center ml-20 pt-3 pb-5 pr-16">
+    <nav class="flex items-center justify-between ml-20 pt-3 pb-5 pr-16">
         <div class="logo w-1/4">
             <img src="./assets/paytm_logo.png" width="180px" alt="">
         </div>
-        <div class="nav-options flex w-2/3 gap-x-10 font-semibold text-[18px]">
+        <div class="nav-options flex flex-row lg:w-2/3 gap-x-10 font-semibold text-[18px] lg:flex hidden">
             <div><a href="">Paytm for Consumer</a></div>
             <div><a href="">Paytm For Business</a></div>
             <div><a href="">Company</a></div>
@@ -41,7 +61,7 @@
     </div>
 
     <div class="paytm-upi flex justify-between ">
-        <div class="upi-left mt-[130px] pl-[10%] lg:w-[46%] pb-16 w-[100%]">
+        <div class="upi-left lg:mt-[130px] mt-12 pl-[10%] lg:w-[46%] pb-16 w-[100%]">
             <div>
                 <img src="./assets/paytm_logo_top_down.png" alt="logo" height="80px" width="80px" class="shadow-2xl rounded-[14px]">
             </div>
@@ -57,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div class="upi-right w-[503px] h-[530px] mt-[130px] sm:hidden lg:block">
+        <div class="upi-right w-[503px] h-[530px] mt-[130px] sm:block hidden">
             <img src="./assets/banner_image.webp" alt="">
         </div>
     </div>
@@ -242,84 +262,87 @@
     </div>
 
     <div class="paytm-payment-options bg-[#f5f7fa]">
-        <div class="mx-[10%] pt-[100px] pb-8">
+        <div class="mx-[10%] lg:pt-[100px] pt-10 pb-8">
             <h1 class="text-[50px] font-bold">Paytm Payment Instruments</h1>
         </div>
         <div class="wallet mx-[10%] mb-12">
-            <div class="paytm-upi flex md:flex-row justify-between bg-white rounded-lg pb-4 sm:flex-col">
-                <div class="upi-left lg:w-[45%] lg:pt-[120px] lg:pl-[120px] px-[6%] sm:pt-[5%]">
+            <div class="paytm-upi flex lg:flex-row justify-between bg-white rounded-lg pb-4 flex-col-reverse">
+                <div class="upi-left lg:w-[45%] lg:pt-[120px] lg:pl-[120px] px-[6%] py-[5%]">
                     <div>
-                        <img src="./assets/paytm_wallet.png" alt="logo" height="80px" width="80px" class="rounded-[24px]">
+                        <img src="./assets/paytm_wallet.png" alt="logo" height="80px" width="80px" class="rounded-[24px] mx-auto lg:mx-0">
                     </div>
                     <div class="mt-[40px]">
                         <h1 class="text-[35px] font-bold leading-tight">The Fastest Way to Pay In-store & Online.</h1>
                         <p class="pt-5 text-[17px] font-medium">Load up your Paytm Wallet for free and make payments in a jiffy at over 21 million stores, websites and apps.</p>
                     </div>
-                    <div class="mt-9">
-                        <div class=" flex bg-black text-white w-[250px] h-[45px] justify-center items-center rounded-[25px] hover:bg-white hover:text-black hover:border hover:border-black hover:font-bold">
+                    <div class="mt-9 ">
+                        <div class=" flex bg-black text-white w-[250px] h-[45px] justify-center items-center rounded-[25px] hover:bg-white hover:text-black hover:border hover:border-black hover:font-bold mx-auto lg:mx-0 ">
                             <span">Download the App</span>
                             <span><i class="fa-brands fa-apple"></i></span>
                             <span><i class="fa-brands fa-google-play"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="upi-right w-[503px] h-[540px] pt-[70px]  mr-10">
-                    <img src="./assets/paytm_wallet_phone.webp" alt="">
+                <div class="upi-right h-[300px] w-[250px] mx-auto lg:w-[503px] lg:h-[540px] pt-[70px]  lg:mr-10">
+                    <img src="./assets/paytm_wallet_phone.webp" alt="" class="h-[100%] w-[100%]">
                 </div>
             </div>
         </div>
 
         <div class="wallet mx-[10%] mb-12">
-            <div class="paytm-upi flex justify-between bg-white rounded-lg pb-4">
-                <div class="upi-left w-[45%] pt-[70px] pl-[120px]">
-                    <div class="flex items-center">
-                        <img src="./assets/upi_money_transfer.png" alt="logo" height="80px" width="80px" class="rounded-[24px]">
-                        <p class="mx-4 font-bold text-[17px]">UPI Money <br> Transfer</p>
+            <div class="paytm-upi flex lg:flex-row justify-between bg-white rounded-lg pb-4 flex-col-reverse">
+                <div class="upi-left lg:w-[45%] lg:pt-[120px] lg:pl-[120px] px-[6%] py-[5%]">
+                    <div class=" flex items-center">
+                        <div class="mx-auto lg:mx-0">
+                            <img src="./assets/upi_money_transfer.png" alt="logo" height="80px" width="80px" class="rounded-[24px] ">
+                            <span class="md:mx-4 font-bold text-[17px]">UPI Money <br> Transfer</span>
+
+                        </div>      
                     </div>
                     <div class="mt-[40px]">
                         <h1 class="text-[35px] font-bold leading-tight">Pay anyone directly from your bank account.</h1>
                         <p class="pt-5 text-[17px] font-medium">Pay anyone, everywhere. Make contactless & secure payments in-stores or online using Paytm Wallet or Directly from your Bank Account. Plus, send & receive money from anyone.</p>
                     </div>
                     <div class="mt-9">
-                        <div class=" flex bg-black text-white w-[250px] h-[45px] justify-center items-center rounded-[25px] hover:bg-white hover:text-black hover:border hover:border-black hover:font-bold">
+                        <div class=" flex bg-black text-white w-[250px] h-[45px] justify-center items-center rounded-[25px] hover:bg-white hover:text-black hover:border hover:border-black hover:font-bold mx-auto lg:mx-0 ">
                             <span">Download the App</span>
                             <span><i class="fa-brands fa-apple"></i></span>
                             <span><i class="fa-brands fa-google-play"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="upi-right w-[503px] h-[540px] pt-[70px]  mr-16">
+                <div class="upi-right h-[300px] w-[250px] mx-auto lg:w-[503px] lg:h-[540px] pt-[70px] lg:mr-16">
                     <img src="./assets/money_transfer_phone.webp" alt="">
                 </div>
             </div>
         </div>
 
         <div class="wallet mx-[10%] mb-12">
-            <div class="paytm-upi flex justify-between bg-white rounded-lg pb-16">
-                <div class="upi-left w-[45%] pt-[120px] pl-[120px]">
+            <div class="paytm-upi flex lg:flex-row justify-between bg-white rounded-lg pb-4 flex-col-reverse">
+                <div class="upi-left lg:w-[45%] lg:pt-[120px] lg:pl-[120px] px-[6%] pt-[10%] pb-[5%]">
                     <div>
-                        <img src="./assets/paytm_postpaid.webp" alt="logo" height="85px" width="170px" class="rounded-[24px]">
+                        <img src="./assets/paytm_postpaid.webp" alt="logo" height="85px" width="170px" class="rounded-[24px] mx-auto lg:mx-0">
                     </div>
                     <div class="mt-[40px]">
                         <h1 class="text-[35px] font-bold leading-tight">Want it? <br> No more waiting for it.</h1>
                         <p class="pt-5 text-[17px] font-medium">With Paytm Postpaid, your wishlist doesn't have to be on the waitlist. Shop for the things you want today and pay for them next month.</p>
                     </div>
                     <div class="mt-9">
-                        <div class=" flex bg-black text-white w-[250px] h-[45px] justify-center items-center rounded-[25px] hover:bg-white hover:text-black hover:border hover:border-black hover:font-bold">
+                        <div class=" flex bg-black text-white w-[250px] h-[45px] justify-center items-center rounded-[25px] hover:bg-white hover:text-black hover:border hover:border-black hover:font-bold mx-auto lg:mx-0 ">
                             <span">Download the App</span>
                             <span><i class="fa-brands fa-apple"></i></span>
                             <span><i class="fa-brands fa-google-play"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="upi-right  pt-[70px]  mr-20">
+                <div class="upi-right h-[300px] w-[250px] mx-auto lg:w-[503px] lg:h-[540px] pt-[70px] lg:mr-16">
                     <img src="./assets/paytm_postpaid_phone.webp" alt="" height="500px" width="430px">
                 </div>
             </div>
         </div>
 
-        <div class="partner-banks mx-[10%] pb-28 flex gap-x-14">
-            <div class="bank1 bg-white pt-10 px-16 rounded-2xl">
+        <div class="partner-banks mx-[10%] lg:pb-20 pb-7 lg:flex lg:gap-x-16 flex-wrap">
+            <div class="bank1 bg-white lg:pt-10 pt-4 px-16 rounded-2xl lg:w-[47%] mb-10">
                 <div>
                     <img src="./assets/paytm_hdfc.png" alt="" width="190px">
                 </div>
@@ -335,7 +358,7 @@
                     <img src="./assets/sumit_sharma_card.webp" alt="">
                 </div>
             </div>
-            <div class="bank1 bg-white pt-10 px-16 rounded-2xl">
+            <div class="bank1 bg-white lg:pt-10 pt-4 px-16 rounded-2xl lg:w-[47%] mb-10">
                 <div class="pt-[60px]">
                     <img src="./assets/paytm_sbi.png" alt="" width="190px">
                 </div>
@@ -354,10 +377,10 @@
         </div>
     </div>
 
-    <div class="financial-services mt-28">
+    <div class="financial-services lg:mt-28 mt-10">
         <h1 class="text-[48px] font-bold px-[10%]">Financial Services by Paytm</h1>
-        <div class="payments-bank mt-16 flex gap-x-40 pb-16 px-[10%]">
-            <div class="bank-left w-1/2">
+        <div class="payments-bank lg:mt-16 mt-10 flex lg:flex-row flex-col-reverse gap-x-40 pb-16 px-[10%]">
+            <div class="bank-left lg:w-1/2">
                 <div>
                     <img src="./assets/paytm_payments_bank.png" alt="" height="35px" width="212px">
                 </div>
@@ -371,15 +394,15 @@
                     <button class="bg-[#002970] text-white h-16 w-48 rounded-lg font-medium text-lg">Learn More <i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
-            <div class="bank-right">
+            <div class="bank-right mx-auto">
                 <img src="./assets/payments_bank_phone.webp" alt="" height="500px" width="450px">
             </div>
         </div>
 
         <div class="bg-[#f5f7fa] ">
-            <div class="paytm-money bg-[url('./assets/paytm_money_background.webp')] bg-cover ">
-                <div class="pt-24 flex flex-row-reverse gap-x-40 pb-20 mx-[10%]">
-                    <div class="bank-left w-1/2">
+            <div class="paytm-money bg-[url('./assets/paytm_money_background.webp')] bg-cover">
+                <div class="pt-24 flex lg:flex-row-reverse flex-col-reverse gap-x-40 pb-20 mx-[10%]">
+                    <div class="bank-left lg:w-1/2 mt-8 lg:mt-0">
                         <div>
                             <img src="./assets/paytm_money.webp" alt="" height="53px" width="156px">
                         </div>
@@ -393,36 +416,36 @@
                             <button class="bg-[#002970] text-white h-12 w-40 rounded-3xl font-medium text-lg">Learn More <i class="fa-solid fa-angle-right pl-3"></i></button>
                         </div>
                     </div>
-                    <div class="bank-right">
+                    <div class="bank-right mx-auto">
                         <img src="./assets/paytm_money_phone.webp" alt="" height="500px" width="450px">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="insurance-broking mt-16 flex gap-x-40 pb-16 mx-[10%] mb-16">
-            <div class="bank-left w-1/2">
+        <div class="insurance-broking mt-16 flex lg:flex-row flex-col-reverse gap-x-40 pb-16 mx-[10%] lg:mb-16">
+            <div class="bank-left lg:w-1/2 mt-8">
                 <div>
                     <img src="./assets/paytm_insurance.webp" alt="" height="35px" width="212px">
                 </div>
                 <div class="mt-14">
                     <h1 class="text-[40px] font-bold">Insurance made easy.</h1>
-                    <p class="font-medium text-[20px] mt-12">
+                    <p class="font-medium text-[20px] lg:mt-12 mt-6">
                         Buying insurance does not have to be tedious, time-consuming & confusing. Paytm Insurance removes the worry of getting insured by making it simple, convenient & easy-to-understand.
                     </p>
                 </div>
-                <div class="mt-12">
+                <div class="lg:mt-12 mt-8">
                     <button class="bg-[#002970] text-white h-12 w-40 rounded-3xl font-medium text-lg">Learn More <i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
-            <div class="bank-right">
+            <div class="bank-right mx-auto">
                 <img src="./assets/paytm_insurance_phone.webp" alt="" height="500px" width="450px">
             </div>
         </div>
             
         <div class="bg-[#f5f7fa]">     
-            <div class="personal-loan mx-[10%] pt-20 flex flex-row-reverse gap-x-40 pb-24">
-                <div class="bank-left w-1/2 mt-8 pr-12">
+            <div class="personal-loan mx-[10%] pt-20 flex lg:flex-row-reverse flex-col-reverse gap-x-40 pb-24">
+                <div class="bank-left lg:w-1/2 mt-12 pr-12">
                     <div>
                         <img src="./assets/personal_loan.png" alt="" height="35px" width="212px">
                     </div>
@@ -436,7 +459,7 @@
                         <button class="bg-[#002970] text-white h-12 w-40 rounded-3xl font-medium text-lg">Learn More <i class="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
-                <div class="bank-right">
+                <div class="bank-right mx-auto">
                     <img src="./assets/personal_loan_phone.webp" alt="" height="500px" width="450px">
                 </div>
             </div>
@@ -445,10 +468,10 @@
 
     <div class="business-services">
         <h1 class="mx-[10%] mt-28 font-bold text-[48px]">Business Services by Paytm</h1>
-        <div class="accept-payments flex justify-between mx-[10%] bg-[#f5f7fa] mt-8 rounded-lg py-16 mb-12">
-            <div class="accept-payments-left w-[45%] flex flex-col justify-center pl-[15%]">
+        <div class="accept-payments flex lg:flex-row flex-col-reverse lg:justify-between mx-[10%] bg-[#f5f7fa] mt-8 rounded-lg py-16 mb-12">
+            <div class="accept-payments-left lg:w-[45%] flex flex-col justify-center pl-[15%]">
                 <div>
-                    <h1 class="font-bold text-[36px]">Accept payments online with ease</h1>
+                    <h1 class="font-bold text-[36px] mt-4">Accept payments online with ease</h1>
                     <p class="mt-4 font-medium text-[17px]">Grow your business with the payment gateway that powers India’s largest brands and even the Paytm App</p>
                 </div>
                 <div class="mt-8">
@@ -456,74 +479,75 @@
                 </div>
             </div>
             <div class="accept-paymets-right">
-                <img src="./assets/paytm_all_in_one.webp" alt="" height="465px" width="433px">
+                <img src="./assets/paytm_all_in_one.webp" alt="" class="lg:h-[465px] lg:w-[433px] h-[300px] w-[280px] mx-auto">
             </div>
         </div>
 
-        <div class="inShop-payments flex justify-between mx-[10%] bg-[#f5f7fa] mt-8 rounded-lg py-16 mb-12">
-            <div class="inShop-payments-left w-[45%] flex flex-col justify-center pl-[15%]">
+        <div class="inShop-payments flex lg:flex-row flex-col-reverse lg:justify-between mx-[10%] bg-[#f5f7fa] mt-8 rounded-lg py-16 mb-12">
+            <div class="inShop-payments-left lg:w-[45%] flex flex-col justify-center pl-[15%]">
                 <div>
-                    <h1 class="font-bold text-[36px]">In-shop payments powered by Paytm.</h1>
+                    <h1 class="font-bold text-[36px] mt-4">In-shop payments powered by Paytm.</h1>
                     <p class="mt-4 font-medium text-[17px]">Millions of small & big businesses use Paytm to accept payments anywhere any time with a wide range of solutions for all kind of merchants</p>
                 </div>
                 <div class="mt-8">
                     <button class="bg-[#002970] text-white h-12 w-40 rounded-3xl font-medium text-lg">Learn More <i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
-            <div class="inShop-paymets-right">
-                <img src="./assets/paytm_inshop_payment.webp" alt="" height="465px" width="433px">
+            <div class="inShop-paymets-right flex justify-between pl-12">
+                <img src="./assets/upi_money_transfer.png" class="lg:hidden block h-[95px] w-[95px] mt-10 " alt="">
+                <img src="./assets/paytm_inshop_payment.webp" alt="" class="lg:h-[341px] lg:w-[433px] h-[200px] w-[250px]" >
             </div>
         </div>
     </div>
 
-    <div class="business-tools mt-32 mb-32">
+    <div class="business-tools lg:my-32 my-12">
         <h1 class="text-[40px] font-bold mx-[10%]">Business Tools to help your business grow</h1>
-        <div class="mx-[10%] flex gap-x-20 mt-24 flex-wrap">
-            <div class="pos-billing  w-1/5">
+        <div class="mx-[10%] flex lg:gap-x-20 lg:mt-16 flex-wrap">
+            <div class="pos-billing lg:w-1/5 md:w-[40%] mx-auto">
                 <div>
-                    <img src="./assets/billing_software.webp" alt="" height="220px" width="240px">
+                    <img src="./assets/billing_software.webp" alt="" height="220px" width="240px" class="mx-auto">
                 </div>
                 <h1 class="font-bold text-[26px] mt-4">POS Billing Software</h1>    
-                <p class="mt-6 font-medium text-[20px]">Say Hello to Smart Retail Business Management</p>  
+                <p class="lg:mt-6 mt-2 font-medium text-[20px]">Say Hello to Smart Retail Business Management</p>  
                 <a href=""><p class="font-bold mt-2">Learn More</p></a>         
             </div>
-            <div class="pos-billing  w-1/5">
+            <div class="pos-billing lg:w-1/5 md:w-[40%] w-[100%]">
                 <div>
-                    <img src="./assets/business_app.webp" alt="" height="220px" width="240px">
+                    <img src="./assets/business_app.webp" alt="" height="220px" width="240px" class="mx-auto">
                 </div>
                 <h1 class="font-bold text-[26px] mt-4">Paytm for Business App</h1>    
-                <p class="mt-6 font-medium text-[20px]">Everything you need to manage your business on your phone</p>  
+                <p class="lg:mt-6 mt-2 font-medium text-[20px]">Everything you need to manage your business on your phone</p>  
                 <a href=""><p class="font-bold mt-2">Learn More</p></a>         
             </div>
-            <div class="pos-billing  w-1/5">
+            <div class="pos-billing lg:w-1/5 md:w-[40%] w-[100%]">
                 <div>
-                    <img src="./assets/advertise.webp" alt="" height="220px" width="240px">
+                    <img src="./assets/advertise.webp" alt="" height="220px" width="240px" class="mx-auto">
                 </div>
                 <h1 class="font-bold text-[26px] mt-4">Advertise on Paytm</h1>    
-                <p class="mt-6 font-medium text-[20px]">Grow your business by advertising on India’s largest mobile business</p>  
+                <p class="lg:mt-6 mt-2 font-medium text-[20px]">Grow your business by advertising on India’s largest mobile business</p>  
                 <a href=""><p class="font-bold mt-2">Learn More</p></a>         
             </div>
-            <div class="pos-billing w-1/5">
+            <div class="pos-billing lg:w-1/5 md:w-[40%] w-[100%]">
                 <div>
-                    <img src="./assets/business_khata.webp" alt="" height="220px" width="240px">
+                    <img src="./assets/business_khata.webp" alt="" height="220px" width="240px" class="mx-auto">
                 </div>
                 <h1 class="font-bold text-[26px] mt-4">Business Khata</h1>    
-                <p class="mt-6 font-medium text-[20px]">Managing Khata made easy</p>  
+                <p class="lg:mt-6 mt-2 font-medium text-[20px]">Managing Khata made easy</p>  
                 <a href=""><p class="font-bold mt-2">Learn More</p></a>         
             </div>
         </div>
     </div>
 
     <div class="last-section bg-[#f0fbff] py-32">
-        <div class="paytm-money mx-[13%] bg-white flex py-16 rounded-lg mb-10">
-            <div class="w-[20%] px-8">
+        <div class="paytm-money mx-[13%] bg-white flex lg:flex-row flex-col py-16 rounded-lg mb-10">
+            <div class="lg:w-[20%] px-8">
                 <div>
                     <img src="./assets/paytm_money.webp" alt="" height="59px" width="158px">
                 </div> 
                 <p class="pt-12 font-medium">Get started on wealth creation journey with Zero brokerage fee & no hidden charges.</p>
                 <div class="pt-3 "><p class="text-[#66d6ff] font-medium text-[17px]">Learn More</p></div>
             </div>
-            <div class="flex gap-x-5 pr-5 flex-wrap">
+            <div class="flex gap-x-5 gap-y-5 pr-5 flex-wrap justify-center lg:justify-space lg:mt-0 mt-6">
                 <div class="bg-[#66d6ff] rounded-lg flex flex-col items-center p-1">
                     <div class="h-[158px] w-[145px]">
                         <img src="./assets/invest_in_stocks.webp" alt="" class="w-[100%] h-[100%]">
@@ -557,15 +581,15 @@
             </div>
         </div>
 
-        <div class="paytm-travel mx-[13%] bg-white flex py-16 rounded-lg">
-            <div class="w-[20%] px-8">
+        <div class="paytm-travel mx-[13%] bg-white flex lg:flex-row flex-col lg:py-16 rounded-lg">
+            <div class="lg:w-[20%] px-8">
                 <div>
                     <img src="./assets/paytm_travel.webp" alt="" height="59px" width="158px">
                 </div> 
                 <p class="pt-12 font-medium">Best travel solutions with quick ticket bookings, great offers and easy refunds</p>
                 <div class="pt-3"><p class="text-[#66d6ff] font-medium text-[17px]">Learn More</p></div>
             </div>
-            <div class="flex gap-x-5 flex-wrap">
+            <div class="flex gap-x-5 gap-y-5 flex-wrap justify-center lg:justify-space lg:mt-0 mt-6">
                 <div class="bg-[#66d6ff] text-white pl-4 rounded-lg w-[155px]">
                     <div class="h-[72px] w-[72px] bg-white rounded-full mt-8">
                         <img src="./assets/plane.webp" alt="">
@@ -605,17 +629,20 @@
         </div>
     </div>
 
-    <footer class="px-[13%] py-[4%] flex items-center bg-[#f5f7fa]">
-        <div class="footer-left flex gap-x-3">
+    <footer class="px-[13%] py-[4%] flex lg:flex-row flex-col items-center bg-[#f5f7fa]">
+        <div class="footer-left flex lg:flex-row flex-col lg:gap-x-3 gap-y-3">
             <h1 class="font-bold text-[20px]">Download Paytm App <br> to Pay from anywhere</h1>
             <img src="./assets/download_app_store.svg" alt="">
             <img src="./assets/dowload_play_store.svg" alt="">
         </div>
-        <div class="footer-right flex ml-[35%] gap-x-10">
+        <div class="footer-right flex lg:ml-[35%] gap-x-10 mt-8 lg:mt-0">
             <img src="./assets/twitter.svg" alt="" class="w-[25px] h-[21px]">
             <img src="./assets/instagram.svg" alt="" class="w-[25px] h-[21px]">
             <img src="./assets/facebook.svg" alt="" class="w-[25px] h-[21px]">
         </div>
+        
     </footer>
+    <hr style="height:5px;border-width:0;color:#00baf2;background-color:#00baf2">
+    <hr style="height:5px;border-width:0;color:#0f4a8a;background-color:#0f4a8a">
 </body>
 </html>
